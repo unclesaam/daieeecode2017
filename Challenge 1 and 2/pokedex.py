@@ -9,8 +9,8 @@ class Pokedex:
 		with open("pokemons_list.csv",'r') as f:
 			for line in f:
 				vals = line.split('|')
-				print(vals[:-1])
 				pokemon = Pokemon(*line.split('|')[:-1])
+				print(pokemon)
 
 
 
@@ -20,11 +20,11 @@ class Pokemon:
 	def __init__(self,number,name,ptypes):
 		self.number = number
 		self.name = name
-		self.ptypes = ptypes.split(',')
+		self.ptypes = re.sub(" ","",ptypes).split(',')
 
 	def __str__(self):
 		return "%s: His number is %s and he is of type %s"%(
-			self.name)
+			self.name,self.number," and ".join(self.ptypes))
 
 
 
