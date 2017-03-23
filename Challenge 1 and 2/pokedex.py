@@ -20,7 +20,9 @@ class Pokedex:
 			pokemon.number == number or \
 			ptype in pokemon.ptypes:
 				results.append(pokemon)
-		return results
+		if results:
+			return results
+		return "no pokemon found"
 
 
 
@@ -46,3 +48,4 @@ if __name__ == "__main__":
 	print(pokedex.search_pokemon(name="Nidorina"))
 	for p in pokedex.search_pokemon(ptype="Fairy"):
 		print(p)
+	print(pokedex.search_pokemon(name="test"))
