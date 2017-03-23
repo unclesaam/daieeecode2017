@@ -14,7 +14,7 @@ int main () {
     string mot;
     ifstream file;
     file.open ("data");
- 
+     
     while(!file.eof())
     {
         getline(file,texte);
@@ -29,7 +29,7 @@ int main () {
  
  
  
-    cout << mot << endl;
+    cout << file_contents << endl;
  
  
  
