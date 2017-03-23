@@ -3,6 +3,10 @@
 
 bool test() {
 	return 	fonction(0b0) == 0 && \
+		fonction(0b1) == 1 && \
+		fonction(2) == 1 && \
+		fonction(3) == 2 && \
+		fonction(4) == 1 && \
 		fonction(0b1) == 1;
 
 }
